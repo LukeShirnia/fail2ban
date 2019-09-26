@@ -1,0 +1,8 @@
+[INCLUDES]
+ 
+before = common.conf
+ 
+[Definition]
+ 
+failregex = ^<HOST> .*POST .*xmlrpc\.php.*
+ignoreregex =

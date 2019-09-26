@@ -1,0 +1,22 @@
+---
+# defaults file for fail2ban
+f2b_sshd: true
+f2b_xmlrpc: true
+f2b_wp_login: true
+
+sshd_port: 22
+
+ban_action: "firewallcmd-ipset"
+
+# xml_rpc + wp_login
+log_path: "%(nginx_access_log)s"
+
+# xml_rpc
+max_retry: "5"
+find_time: "600"
+ban_time: "31536000"
+
+# wp_login
+wp_login_retry: "10"
+wp_login_findtime: "300"
+wp_login_bantime: "31536000"

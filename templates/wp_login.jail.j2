@@ -1,0 +1,9 @@
+[wp-login]
+enabled = true
+port = http,https
+filter = wp_login
+logpath = {{ log_path  }}
+maxretry = {{ wp_login_retry   }}
+findtime = {{ wp_login_findtime  }}
+# bantime: 1 year
+bantime = {{ wp_login_bantime  }}

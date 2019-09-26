@@ -1,0 +1,25 @@
+---
+# tasks file for fail2ban
+- name: Installing fail2ban
+  import_tasks: install.yml
+  tags:
+    - always
+    - f2b_install
+
+- name: Setting up ssh jail
+  import_tasks: f2b_ssh_jail.yml
+  tags:
+    - f2b_ssh
+  when: f2b_sshd == True
+
+- name: Setting up wordpress xmlrpc jail
+  import_tasks: f2b_xmlrpc_jail.yml
+  tags:
+    - f2b_xmlrpc
+  when: f2b_xmlrpc == True
+
+- name: Setting up wp-login.php jail
+  import_tasks: f2b_wp_login.yml
+  tags:
+    - f2b_wp_login
+  when: f2b_wp_login == True

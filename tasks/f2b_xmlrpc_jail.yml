@@ -1,0 +1,19 @@
+---
+- block:
+  - name: Setting up f2b xmlrpc filter
+    copy:
+      src: xmlrpc.filter
+      dest: /etc/fail2ban/filter.d/xmlrpc.conf
+      owner: root
+      group: root
+      mode: "0644"
+    notify: restart fail2ban
+
+  - name: Setting up f2b xmlrpc jail
+    template:
+      src: xmlrpc.jail.j2
+      dest: /etc/fail2ban/jail.d/xmlrpc.conf
+      owner: root
+      group: root
+      mode: "0644"
+    notify: restart fail2ban

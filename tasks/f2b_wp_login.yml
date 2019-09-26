@@ -1,0 +1,19 @@
+---
+- block:
+  - name: Setting up f2b wp-login.php filter
+    copy:
+      src: wp_login.filter
+      dest: /etc/fail2ban/filter.d/wp_login.conf
+      owner: root
+      group: root
+      mode: "0644"
+    notify: restart fail2ban
+
+  - name: Setting up f2b wp-login.php jail
+    template:
+      src: wp_login.jail.j2
+      dest: /etc/fail2ban/jail.d/wp_login.conf
+      owner: root
+      group: root
+      mode: "0644"
+    notify: restart fail2ban

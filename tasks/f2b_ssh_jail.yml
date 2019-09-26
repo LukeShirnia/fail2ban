@@ -1,0 +1,9 @@
+---
+- name: Configuring fail2ban on ssh port {{ sshd_port  }}
+  template:
+    src: ssh.jail.j2
+    dest: /etc/fail2ban/jail.d/custom_sshd.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart fail2ban

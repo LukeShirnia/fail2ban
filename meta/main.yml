@@ -1,0 +1,32 @@
+galaxy_info:
+  role_name: fail2ban
+  author: Luke Shirnia
+  description: Set up fail2ban and jails such as; sshd, xmlrpc, wp-login
+
+  license: apache
+
+  min_ansible_version: 2.2.0
+
+  platforms:
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - bionic
+    - xenial
+    - trusty
+  - name: EL
+    versions:
+     - 6
+     - 7
+
+  galaxy_tags:
+    - networking
+    - fail2ban
+    - development
+    - systems
+    - yum
+    - debian
+    - redhat
+    - linux

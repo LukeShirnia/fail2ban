@@ -1,0 +1,10 @@
+[DEFAULT]
+bantime  = {{ ban_time  }} 
+findtime  = {{ find_time  }}
+maxretry = {{ max_retry  }} 
+banaction = {{ ban_action }}
+backend = systemd
+
+[sshd]
+enabled = true
+port    = {{ sshd_port  }}
