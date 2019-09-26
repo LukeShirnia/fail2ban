@@ -3,12 +3,12 @@
   - name: Installing epel when os family == RedHat
     yum:
       name: epel-release
-      state: latest
+      state: present
 
   - name: Installing Fail2ban when os family == RedHat
     yum:
       name: fail2ban
-      state: latest
+      state: present
       enablerepo: epel
     notify: restart fail2ban
   when: ansible_os_family == "RedHat"
@@ -17,6 +17,6 @@
   - name: Installing fail2ban when os family == debian
     apt:
       name: fail2ban
-      state: latest
+      state: present
       update_cache: yes
   when: ansible_os_family == "Debian"

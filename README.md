@@ -8,9 +8,9 @@ Role Variables
 --------------
 
 ```
-f2b_sshd: true
-f2b_xmlrpc: true
-f2b_wp_login: true
+f2b_sshd: "y"
+f2b_xmlrpc: "y"
+f2b_wp_login: "y"
 
 sshd_port: 22
 
@@ -38,7 +38,7 @@ Example Playbook
 - hosts: all
   become: yes
   vars:
-    f2b_xmlrpc: false
+    f2b_xmlrpc: "n"
     sshd_port: 1234
   roles:
     - fail2ban

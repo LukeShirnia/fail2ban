@@ -10,16 +10,16 @@
   import_tasks: f2b_ssh_jail.yml
   tags:
     - f2b_ssh
-  when: f2b_sshd == True
+  when: f2b_sshd == "y"
 
 - name: Setting up wordpress xmlrpc jail
   import_tasks: f2b_xmlrpc_jail.yml
   tags:
     - f2b_xmlrpc
-  when: f2b_xmlrpc == True
+  when: f2b_xmlrpc == "y"
 
 - name: Setting up wp-login.php jail
   import_tasks: f2b_wp_login.yml
   tags:
     - f2b_wp_login
-  when: f2b_wp_login == True
+  when: f2b_wp_login == "y"

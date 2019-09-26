@@ -1,8 +1,8 @@
 ---
 # defaults file for fail2ban
-f2b_sshd: true
-f2b_xmlrpc: true
-f2b_wp_login: true
+f2b_sshd: "y"
+f2b_xmlrpc: "y"
+f2b_wp_login: "y"
 
 sshd_port: 22
 
