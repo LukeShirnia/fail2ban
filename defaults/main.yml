@@ -14,9 +14,9 @@ log_path: "%(nginx_access_log)s"
 # xml_rpc
 max_retry: "5"
 find_time: "600"
-ban_time: "31536000"
+ban_time: "1200000"
 
 # wp_login
 wp_login_retry: "10"
 wp_login_findtime: "300"
-wp_login_bantime: "31536000"
+wp_login_bantime: "1200000"
